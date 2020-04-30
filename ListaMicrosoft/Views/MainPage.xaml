@@ -8,9 +8,8 @@
 
     <StackLayout Margin="20,35,20,20">
         <ListView ItemsSource="{Binding Monkeys}"
-          HasUnevenRows="true"
-          ItemSelected="OnListViewItemSelected"
-          ItemTapped="OnListViewItemTapped">
+          HasUnevenRows="true">
+
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
