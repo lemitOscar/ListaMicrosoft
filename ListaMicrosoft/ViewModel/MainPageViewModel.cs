@@ -6,11 +6,13 @@ using System.Text;
 namespace ListaMicrosoft.ViewModel
 {
     using ListaMicrosoft.Model;
+    using System.Threading.Tasks;
     using Xamarin.Forms;
 
     public class MainPageViewModel
     {
         public IList<Monkey> Monkeys { get; private set; }//aqui creo mi lista
+        public Monkey Monkey { get; set; }
 
         public MainPageViewModel()
         {
@@ -135,20 +137,11 @@ namespace ListaMicrosoft.ViewModel
             });
 
             //BindingContext = this;// mi contexto esta aqui solo si lo hago en el main page
+           
         }
 
-        #region Events
-        public void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            Monkey selectedItem = e.SelectedItem as Monkey;//obtiene el elmento seleccionado de mono
-            //await DisplayAlert("si","hola","ok");
-        }
 
-        public void OnListViewItemTapped(object sender, ItemTappedEventArgs e)
-        {
-            Monkey tappedItem = e.Item as Monkey;//obtiene el pulsado de mono
-
-        }
+        #region enventos
         #endregion
     }
 
